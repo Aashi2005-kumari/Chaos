@@ -1,0 +1,254 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#17151f" />
+  <title>Chaos.exe — Ek Click Toh Banta Hai</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="scanlines" aria-hidden="true"></div>
+  <div class="app-shell" id="app">
+    <header class="topbar">
+      <a class="brand" href="#" aria-label="Chaos.exe home">
+        <span class="brand-icon">C:</span>
+        <span>CHAOS<span class="brand-dot">.</span>EXE</span>
+      </a>
+      <div class="top-status"><span class="status-dot"></span><span id="systemStatus">SYSTEM STATUS: SUS</span></div>
+      <div class="top-actions">
+        <button class="small-button" id="soundToggle" type="button" aria-pressed="false">♫ SOUND: OFF</button>
+        <button class="small-button" id="resetTop" type="button">↻ RESET</button>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero panel">
+        <div class="hero-copy">
+          <div class="eyebrow"><span class="eyebrow-dot"></span> VERY UNSTABLE WEBSITE</div>
+          <h1>WELCOME,<br><span class="accent">VICTIM.</span></h1>
+          <p class="hero-lede">Tumne click kyun kiya? Ab jo hoga, uski <strong>zimmedari tumhari.</strong></p>
+          <div class="hero-actions">
+            <button class="primary-button" id="startChaos" type="button">INITIATE CHAOS <span>↗</span></button>
+            <span class="micro-copy">Warning: website ko tameez nahi sikhayi gayi.</span>
+          </div>
+        </div>
+        <div class="hero-art" aria-label="Decorative chaos terminal">
+          <div class="orbit orbit-one"></div><div class="orbit orbit-two"></div>
+          <div class="art-window">
+            <div class="window-bar"><span></span><span></span><span></span><b>chaos.exe</b></div>
+            <div class="terminal-lines">
+              <p><span class="terminal-green">&gt;</span> booting common sense...</p>
+              <p><span class="terminal-pink">[FAIL]</span> common sense not found</p>
+              <p><span class="terminal-green">&gt;</span> loading bakchodi.dll</p>
+              <p class="loading-line"><span></span></p>
+              <p class="terminal-green">READY_</p>
+            </div>
+          </div>
+          <div class="floating-sticker sticker-one">AREY O SAMBHA! <span>⚡</span></div>
+          <div class="floating-sticker sticker-two">100% BAKCHODI</div>
+          <div class="hero-smiley">:')</div>
+        </div>
+      </section>
+
+      <section class="dashboard">
+        <article class="panel meter-panel">
+          <div class="section-heading"><div><span class="section-kicker">LIVE DIAGNOSTICS</span><h2>Chaos Meter</h2></div><span class="live-pill"><span></span> LIVE</span></div>
+          <div class="meter-value"><strong id="meterNumber">0</strong><span>%</span></div>
+          <div class="meter-track"><div class="meter-fill" id="meterFill"></div><div class="meter-ticks"></div></div>
+          <div class="meter-meta"><span id="levelLabel">LEVEL 0 · INNOCENT</span><span id="clickCount">CLICKS: 0</span></div>
+          <div class="mood-row"><span class="mood-icon" id="moodIcon">🙂</span><div><small>WEBSITE MOOD</small><strong id="moodText">Main bilkul normal hoon.</strong></div></div>
+        </article>
+        <article class="panel stats-panel">
+          <span class="section-kicker">CURRENT SITUATION</span>
+          <div class="stat-row"><span>Common sense</span><strong id="senseValue">100%</strong></div>
+          <div class="stat-row"><span>Unnecessary drama</span><strong id="dramaValue">0%</strong></div>
+          <div class="stat-row"><span>Internet points</span><strong id="pointsValue">+0</strong></div>
+          <div class="status-message" id="statusMessage">Sab kuch control mein hai. (Jhooth.)</div>
+        </article>
+      </section>
+
+      <section class="interaction-section">
+        <div class="section-heading section-heading-main"><div><span class="section-kicker">PLEASE DON'T TOUCH</span><h2>Interactive Bakchodi Zone</h2></div><p>Har click ek nayi galti hai.</p></div>
+        <div class="toy-grid">
+          <article class="panel toy-card">
+            <div class="toy-icon">🖱️</div><h3>Click Simulator</h3><p>Apni ungli ki power test karo. Website ki mental health ki guarantee nahi.</p>
+            <button class="outline-button" id="clickSimulator" type="button">CLICK ME, BRO</button>
+          </article>
+          <article class="panel toy-card">
+            <div class="toy-icon">🏃</div><h3>Pakad Ke Dikha</h3><p>Button ko pakadna aasan hota… agar button maanta.</p>
+            <div class="dodge-stage"><button class="dodge-button" id="dodgeButton" type="button">DON'T CLICK</button></div>
+          </article>
+          <article class="panel toy-card">
+            <div class="toy-icon">🧠</div><h3>Common Sense Test</h3><p>Ek simple sawaal. Galat answer dena bhi talent hai.</p>
+            <button class="outline-button" id="senseTest" type="button">TEST MY BRAIN</button>
+          </article>
+          <article class="panel toy-card">
+            <div class="toy-icon">📢</div><h3>Random Gyaan</h3><p>Life advice from a website jisko khud help chahiye.</p>
+            <button class="outline-button" id="randomGyaan" type="button">GIVE ME GYAAN</button>
+          </article>
+        </div>
+      </section>
+
+      <section class="panel event-panel">
+        <div class="section-heading"><div><span class="section-kicker">BREAKING NEWS (FAKE)</span><h2>System ki Haalat</h2></div><span class="event-counter" id="eventCount">EVENTS: 0</span></div>
+        <div class="event-feed" id="eventFeed" aria-live="polite"><div class="feed-entry feed-welcome"><span class="feed-time">NOW</span><span>System booted. IT waale ko mat batana.</span></div></div>
+      </section>
+
+      <section class="final-boss panel" id="finalBoss">
+        <div class="boss-glow"></div>
+        <div class="boss-copy"><span class="section-kicker">ENDGAME PROTOCOL</span><h2 id="bossTitle">FINAL BOSS<br><span>LOCKED.</span></h2><p id="bossDescription">Chaos ko 100% tak le jao. Phir apni kismat dekho.</p></div>
+        <div class="boss-side"><div class="boss-face" id="bossFace">ಠ_ಠ</div><button class="primary-button" id="bossButton" type="button" disabled>UNLOCK AT 100%</button></div>
+      </section>
+
+      <section class="panel score-panel" id="scorePanel">
+        <div class="section-heading"><div><span class="section-kicker">YOUR QUESTIONABLE ACHIEVEMENT</span><h2>Chaos Scorecard</h2></div><span class="score-stamp">CERTIFIED MENACE</span></div>
+        <div class="score-grid">
+          <div><small>TOTAL CLICKS</small><strong id="scoreClicks">0</strong></div>
+          <div><small>CHAOS LEVEL</small><strong id="scoreChaos">0%</strong></div>
+          <div><small>FINAL TITLE</small><strong class="score-title" id="scoreTitle">Innocent Bystander</strong></div>
+        </div>
+        <div class="score-actions"><button class="outline-button" id="playAgain" type="button">↻ PLAY AGAIN</button><button class="text-button" id="copyScore" type="button">COPY MY SCORE ↗</button></div>
+      </section>
+
+      
+<section id="aura-detector" class="aura-page">
+  <div class="aura-orb aura-orb-one"></div>
+  <div class="aura-orb aura-orb-two"></div>
+
+  <div class="aura-shell">
+    <header class="aura-header">
+      <div class="aura-brand">CHAOS<span>PURAN</span></div>
+      <div class="aura-live"><span></span> VIBE SCANNER ONLINE</div>
+    </header>
+
+    <div class="aura-intro" id="aura-intro">
+      <div class="aura-icon">🗿</div>
+      <p class="aura-kicker">THE INTERNET'S MOST UNNECESSARY TEST</p>
+      <h2>DETECT YOUR<br><span>TRUE AURA.</span></h2>
+      <p class="aura-description">
+        5 questions. Zero judgement. Infinite bakchodi.
+        Discover your real internet personality.
+      </p>
+
+      <div class="aura-stats">
+        <div><strong>05</strong><span>QUESTIONS</span></div>
+        <div><strong>∞</strong><span>CRINGE</span></div>
+        <div><strong>0%</strong><span>SCIENTIFIC</span></div>
+      </div>
+
+      <button id="aura-start" class="aura-button">
+        SCAN MY AURA <span>↗</span>
+      </button>
+      <p class="aura-disclaimer">⚠️ Results may expose your entire personality.</p>
+    </div>
+
+    <div id="aura-quiz" class="aura-quiz" hidden>
+      <div class="aura-quiz-top">
+        <span id="aura-step-label">QUESTION 01 / 05</span>
+        <span id="aura-percent">20%</span>
+      </div>
+
+      <div class="aura-progress">
+        <div id="aura-progress-fill"></div>
+      </div>
+
+      <div id="aura-question-area" class="aura-question-area">
+        <p class="aura-kicker">BE HONEST, BRO.</p>
+        <h3 id="aura-question"></h3>
+        <p id="aura-hint">Choose your most authentic response.</p>
+        <div id="aura-options" class="aura-options"></div>
+      </div>
+
+      <button id="aura-back" class="aura-back" hidden>
+        ← Previous question
+      </button>
+    </div>
+
+    <div id="aura-result" class="aura-result" hidden>
+      <div class="aura-result-top">
+        <span class="aura-kicker">SCAN COMPLETE</span>
+        <span class="aura-stamp">UNVERIFIED ✓</span>
+      </div>
+
+      <div id="aura-result-emoji" class="aura-result-emoji">🗿</div>
+      <p id="aura-result-label" class="aura-kicker">YOUR DESTINY</p>
+      <h3 id="aura-result-title">CERTIFIED CLOWN</h3>
+      <p id="aura-result-roast" class="aura-roast"></p>
+
+      <div class="aura-score-panel">
+        <div>
+          <span>AURA SCORE</span>
+          <strong id="aura-score">-250</strong>
+        </div>
+        <div>
+          <span>RARITY</span>
+          <strong id="aura-rarity">Legendary</strong>
+        </div>
+      </div>
+
+      <div class="aura-result-message" id="aura-result-message"></div>
+
+      <div class="aura-actions">
+        <button id="aura-share" class="aura-button">
+          SHARE MY AURA ↗
+        </button>
+        <button id="aura-download" class="aura-secondary">
+          DOWNLOAD RESULT CARD ↓
+        </button>
+        <button id="aura-retry" class="aura-secondary">
+          RETAKE THE TEST ↻
+        </button>
+      </div>
+
+      <p id="aura-feedback" class="aura-feedback" aria-live="polite"></p>
+      <p class="aura-disclaimer">For entertainment only. Touch grass responsibly.</p>
+    </div>
+  </div>
+</section>
+
+
+    </main>
+
+    <footer><span>CHAOS.EXE © 20XX · MADE WITH ZERO STABILITY</span><span>NO COMPUTERS WERE EMOTIONALLY STABLE IN THIS DEMO.</span></footer>
+  </div>
+
+  <div class="toast-stack" id="toastStack" aria-live="polite" aria-atomic="false"></div>
+  <div class="boss-overlay" id="bossOverlay" role="dialog" aria-modal="true" aria-labelledby="overlayTitle" hidden>
+    <div class="boss-modal panel">
+      <button class="modal-close" id="closeBoss" type="button" aria-label="Close">×</button>
+      <div class="boss-modal-glitch">SYSTEM OVERCOOKED</div>
+      <div class="modal-emoji">💀</div>
+      <h2 id="overlayTitle">BHAI BAS KAR!</h2>
+      <p id="overlayRoast">Tumne website ko emotional damage de diya.</p>
+      <div class="modal-score"><span>CHAOS SCORE</span><strong id="overlayScore">100%</strong></div>
+      <button class="primary-button" id="modalReset" type="button">REBOOT THIS NONSENSE ↻</button>
+    </div>
+  </div>
+  
+<!-- BEIZZATI BOT -->
+<section id="roast-bot" class="roast-section">
+  <h2>💀 BEIZZATI BOT™</h2>
+  <p>Your ego called. It wants a refund.</p>
+
+  <input id="roast-name" type="text"
+         placeholder="Apna naam daal, bhai..." />
+
+  <div id="roast-result">
+    Teri beizzati yahan hogi 💀
+  </div>
+
+  <button id="roast-btn">🔥 ROAST ME</button>
+  <button id="copy-roast-btn">📋 COPY ROAST</button>
+</section>
+
+
+
+
+  <script src="script.js"></script>
+</body>
+
+</html>
